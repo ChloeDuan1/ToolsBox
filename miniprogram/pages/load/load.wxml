@@ -1,0 +1,33 @@
+<!--pages/load/load.wxml-->
+<!--pages/myinfo/myinfo.wxml-->
+<!-- <text>pages/myinfo/myinfo.wxml</text> -->
+<view class='content'>
+  <view class='nav'>
+  <!--返回主页  -->
+<view class='backHome' bindtap='backHomeTap'>
+  <image src='/images/home.png' class='backHomeImg'></image>
+</view>
+    <view class='top'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='nickname'>
+      <open-data type="userNickName"></open-data> 
+    </view>
+  </view>
+    <view class='item'>
+      <view class='mainListText'>用户名：</view>
+    <input class='mainListInput' placeholder='请输入真实姓名' maxlength='25' bindinput='userNameInput'></input>
+    </view>
+    <view class='item'>
+    <view class='mainListText'>部门：</view>
+    <input class='mainListInput' placeholder='请输入二级部门'  maxlength='25' bindinput='apartmentInput'></input>
+    </view>
+</view>
+
+<!--Button  -->
+<form bindsubmit="registerSuccessTap" report-submit="true" >
+    <button form-type="submit" class='button' hover-class="hover">
+    保存
+    </button>
+</form>
+

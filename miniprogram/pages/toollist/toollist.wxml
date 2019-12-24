@@ -1,0 +1,50 @@
+<!--pages/toollist/toollist.wxml-->
+  <!--顶部标题栏-->
+  <view class='page-header'>
+    <text class='page-title'>{{title}}</text>
+  </view>
+<view class='page-wrapper '>
+  <!-- 订单列表 -->
+ <view class="bus-list ">
+    <block wx:for="{{Showlist}}" wx:key="">
+      <view class="bus-list-item ">
+        <view class="port">{{item.portAddr}}</view>
+        <view wx:if = "{{item.State == '可借用'}}">
+          <form bindsubmit="Borrow" report-submit='true' data-toolid= "{{item.ID}}" data-toolname = "{{item.Name}}" data-tooldetails= "{{item.Details}}" data-id="{{item._id}}" data-portaddr="{{item.portAddr}}" disabled='{{isDisabled}}'>   
+            <button class="{{isChecked?'is_checked':'GreenState'}}"  form-type="submit" > 
+              <text> {{btnText}} </text> 
+            </button>
+          </form>
+        </view>
+        <view wx:elif = "{{item.State == '已借出'}}">
+          <view class="GrayState"> 
+            <text> {{item.State}} </text>
+          </view>
+        </view>        
+        <view class="detail  ">
+          <view class="detail1">
+            <view class="ToolName">
+              <text></text>{{item.Name}}</view>
+            <view class="ToolDetails">
+              <text></text>{{item.Details}}</view>
+            <view class="Current_Borrower">
+              <text></text>当前借用人：{{item.Current_Borrower}}</view>
+          </view>
+          <view class="tags">
+            <view>
+              <text class="toolID">ID:{{item.ID}}</text>
+            </view>
+            <view class="cycle">
+              <text>借用周期：{{item.Borrowing_Cycle}}h</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </block>
+
+  </view>
+
+
+</view>
+

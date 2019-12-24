@@ -1,0 +1,48 @@
+/* pages/revert/revert.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color:#f6f6f6;    
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+  color:#353535;
+  position: relative;
+} 
+.nav{
+    background-color: rgb(255, 255, 255);
+}
+.backHome{ 
+  width: 10rpx;
+  height: 10rpx;
+  margin-bottom: 5rpx;
+}
+.backHomeImg{
+  width: 44rpx;
+  height:44rpx;
+}
+.section{
+	background-color: #fff;
+	margin-top:5rpx;
+	padding:30rpx;
+}
+
+.item{
+  height: 90rpx;
+  background-color: #fff;
+  margin: 5rpx;
+  display: flex;
+  border-bottom:2rpx outset rgb(229, 235, 231);
+  border-radius: 20rpx;
+}
+.button1 {
+  margin-top: 20px;
+  width: 80%;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+/* 按下变颜色 */
+.hover {
+  background:  rgb(236, 179, 156);
+}

@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<!--列表页-->
+<view class='container'>
+  <!--等待框-->
+  <loading hidden="{{!loading}}">加载中...</loading>
+  <!--顶部标题栏-->
+  <view class='page-header'>
+    <text class='page-title'>{{title}}</text>
+  </view>
+</view>
+  <view class='page-body' >
+    <!--类型判断,显示不同的数据-->
+    <block wx:for="{{Boxlist}}" wx:key="">
+      <navigator url="../toollist/toollist?boxname={{item.Box_Name}}&bluetooth={{item.Bluetooth}}&model={{item.Model}}">
+        <view class='item'>
+          <image class='icon' src='/images/Box.png'></image>
+          <view class='meta'>
+            <text class='BoxName'>{{item.Box_Name}}</text>
+            <view class='Details'>
+              <text>详情：</text>
+              <text>{{item.Details}}</text>
+            </view>
+            <view class='BoxAddr'>
+              <text>地址：</text>
+              <text>{{item.Addr}}</text>
+            </view>
+            <view wx:if ="{{item.Model == 'manage'}}" >
+              <view class='Model'>
+                <text>管理员正在排查，工具暂不可借！</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </block>
+  </view>

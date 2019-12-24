@@ -1,0 +1,43 @@
+/* pages/load/load.wxss */
+/* pages/myinfo/myinfo.wxss */
+.nav{
+    background-color: rgb(255, 255, 255);
+}
+.backHome{ 
+  width: 50rpx;
+  height: 50rpx;
+  margin-bottom: 20rpx;
+}
+.backHomeImg{
+  width: 44rpx;
+  height:44rpx;
+}
+.top{
+  width: 250rpx;
+  height: 250rpx;
+  margin: 0 auto;
+}
+.nickname{
+  margin-bottom: 40rpx;
+  text-align: center;
+}
+.item{
+  height: 70rpx;
+  background-color: #fff;
+  margin: 20rpx;
+  display: flex;
+  border-radius: 20rpx;
+}
+.button {
+  margin-top: 50px;
+  width: 80%;
+  background-color: rgb(252, 126, 67);
+  color: white;
+  border-radius: 98rpx;
+  background: bg_red;
+}
+/* 按下变颜色 */
+.hover {
+  background:  rgb(236, 179, 156);
+}
+

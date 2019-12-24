@@ -1,0 +1,26 @@
+<!--pages/revert/revert.wxml-->
+<view class='content'>
+  <view class='nav'>
+  <!--返回主页  -->
+    <view class="backHome" bindtap="backHomeTap">
+      <image src="/images/home.png" class="backHomeImg"></image>
+    </view> 
+    <view class='section'> 
+      <block wx:for="{{Revertlist}}" wx:key="">
+        <view class='item'> 
+          <text>工具名称：{{item.Name}}</text>
+        </view>      
+        <view class='item'> 
+          <text>工具ID：{{item.ID}}</text>
+        </view>     
+        <view class='item'> 
+          <text>工具详情：{{item.Details}}</text>
+        </view> 
+        <view class='item'> 
+          <text>工具柜位置：{{item.BoxAddr}}</text>
+        </view>  
+      </block>
+    </view> 
+  </view>
+  <button class="button1" disabled='{{isDisabled}}'  hover-class="hover" bindtap='revert'>立即归还</button>
+</view>

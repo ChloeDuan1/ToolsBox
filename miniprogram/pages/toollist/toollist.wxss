@@ -1,0 +1,145 @@
+/* pages/toollist/toollist.wxss */
+.page-title {
+  padding: 20rpx 40rpx;
+  color: rgb(10, 10, 10);
+  font-size: 38rpx;
+  text-align: center;
+}  
+.page-wrapper {
+    margin: 0;
+    font-size: 28rpx;
+    line-height: 1.5;
+    color: #333;
+    background-color: #efefef;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+    min-height:2000rpx;
+}
+
+.bus-list .bus-list-item {
+ position: relative;
+ height: 160rpx;
+ background-color: #fff; 
+ margin: 16rpx 0;
+ border: 2rpx solid #e5e5e5;
+ border-width: 2rpx 0;
+}
+
+.bus-list .bus-list-item::before,.bus-list .bus-list-item::after {
+ position: absolute;
+ left: 122rpx;
+ content: '';
+ width: 24rpx;
+ height: 12rpx;
+ background-color: #efefef;
+ border: 2rpx solid #e5e5e5;
+}
+
+.bus-list .bus-list-item::before {
+  border-radius: 0 0 20rpx 60rpx;
+    border-top: none;
+  top: -2rpx;
+}
+
+.bus-list .bus-list-item::after {
+  border-radius: 60rpx 60rpx 0 0;
+    border-bottom: none;
+  bottom: -2rpx;
+}
+
+.bus-list .bus-list-item .port {
+ position: absolute;
+ left: 0;
+ width: 134rpx;
+ height: 100rpx;
+ line-height: 100rpx;
+ margin: 30rpx 0;
+ color: #00b358;
+ text-align: center;
+ font-size: 40rpx;
+ font-family: Arial;
+ border-right: 2rpx dashed #e5e5e5;
+}
+
+.bus-list .bus-list-item .GreenState {
+ background-color: #00B358;
+ position: absolute;
+ right: 0;
+ width: 120rpx;
+ height: 160rpx;
+ line-height: 160rpx;
+ text-align: center;
+ color: #fff;
+ font-size: 30rpx;
+}
+.bus-list .bus-list-item .GrayState {
+ background-color: rgb(145, 140, 140);
+ position: absolute;
+ right: 0;
+ width: 120rpx;
+ height: 160rpx;
+ line-height: 160rpx;
+ text-align: center;
+ color: #fff;
+ font-size: 30rpx;
+}
+.bus-list .bus-list-item .is_checked {
+   background-color: rgb(145, 140, 140);
+ position: absolute;
+ right: 0;
+ width: 120rpx;
+ height: 160rpx;
+ line-height: 160rpx;
+ text-align: center;
+ color: #fff;
+ font-size: 30rpx;
+}
+.bus-list .bus-list-item.disabled .State {
+  background-color: #c5c5c5;
+}
+
+.bus-list .bus-list-item .detail {
+ height: 80rpx;
+ padding: 5rpx 0;
+ margin: 0 140rpx 0 144rpx;
+}
+
+.bus-list .bus-list-item .detail  .sub-list{
+    height: 52rpx;
+}
+
+
+.bus-list .bus-list-item .ToolName {
+ color: #f74c31;
+ font-size: 30rpx;
+ margin-top: 5rpx;
+}
+.bus-list .bus-list-item .ToolDetails {
+ color:  #999;
+ font-size: 26rpx;
+ margin-top: 5rpx;
+}
+.bus-list .bus-list-item .Current_Borrower {
+ color:  rgb(0, 0, 0);
+ font-size: 26rpx;
+ margin-top: 5rpx;
+}
+.bus-list .bus-list-item .toolID {
+ font-family: Arial;
+ color: #fd8f01;
+ font-size: 32rpx;
+ font-weight: 600;
+}
+
+.bus-list .bus-list-item .tags {
+    width: 160rpx;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    margin-right: 138rpx;
+    margin-top: 5rpx;
+    top: 0;
+}
+
+

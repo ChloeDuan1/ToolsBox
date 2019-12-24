@@ -1,0 +1,76 @@
+/**index.wxss**/
+.page-header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1rpx solid #ccc;
+}
+.page-title {
+  padding: 20rpx 40rpx;
+  color: #999;
+  font-size: 38rpx;
+  text-align: center;
+}  
+.page-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+.item {
+  display: flex;
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid #eee;
+  cursor: pointer;
+}
+.item .icon {
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 20rpx;
+}
+.item .meta {
+  flex: 1;
+}
+.item .meta .title,.item .meta .sub-title {
+  display: block;
+  margin-bottom: 15rpx;
+}
+.item .meta .BoxName {
+  font-size: 32rpx;
+}
+.item .meta .sub-title {
+  font-size: 22rpx;
+  color: #c0c0c0;
+}
+.item .meta .Details {
+  font-size: 26rpx;
+  color: #999;
+}
+.item .BoxAddr {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #f74c31;
+}
+.tips {
+  font-size: 28rpx;
+  text-align: center;
+  padding: 50rpx;
+  color: #ccc;
+}
+.tips image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+.tips image,.tips text {
+  vertical-align: middle;
+}
+.none{
+  display: flex;
+  justify-content: center;
+  margin-top: 50%;
+  color: #666;
+}
+.item .Model {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #45ca50;
+}

@@ -1,0 +1,42 @@
+{
+  "cloud": true,
+  "pages": [
+    "pages/index/index",
+    "pages/chooseLib/chooseLib",
+    "pages/logs/logs",
+    "pages/load/load",
+    "pages/personal/personal",
+    "pages/toollist/toollist",
+    "pages/revert/revert",
+    "pages/test/test",
+    "pages/manage/manage"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "Tools Box",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#b4b4b4",
+    "selectedColor": "#ff5000",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/drawer-off.png",
+        "selectedIconPath": "images/drawer-on.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "iconPath": "images/my-off.png",
+        "selectedIconPath": "images/my-on.png",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

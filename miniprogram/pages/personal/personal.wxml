@@ -1,0 +1,67 @@
+<!--pages/personal/personal.wxml-->
+<view class="container">
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <block wx:for="{{UserINFO}}" wx:key="">
+    <view class='realname'>
+      <text>{{item.username}}</text> 
+    </view>
+    </block>
+  </view>
+</view>
+<view class="page">
+<!--分类 -->
+<view class="li" data-index="0" bindtap='changeToggle'>
+  <view class="left">待归还</view>
+  <view class="right">{{num}} <text class="iconfont {{selectedFlag?      'icon-xiala':'icon-shangjiantou'}}"> </text>
+  </view>
+</view>
+  <view hidden="{{!selectedFlag}}">
+    <block wx:for="{{BorrowList}}" wx:for-item="item">
+      <view class="list">
+        <view>{{item.Name}}</view>
+        <view>起始日期：{{item.StartTime}}</view>
+        <view>借用周期：{{item.Borrowing_Cycle}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view>
+     <view>
+        <view class="weui-search-bar">
+        <text>借用记录</text>
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" bindinput='ToolsIDInput' placeholder="请输入工具ID"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <view class="SearchButton" bindtap='ConditionalSearch'>搜索</view>
+        </view>
+    </view>
+</view>
+
+<view class='history-table-wrap' hidden="{{!searchFlag}}">
+    <view class="table">
+      <view class="tr">
+          <view class="Date">Date</view>
+          <view class="User">User</view>
+          <view class="Action">Action</view>
+      </view>
+      <view class="tr" wx:for="{{Recordlist}}">
+          <view class="td td1">{{item.time}}</view>
+          <view class="td td2">{{item.user}}</view>
+          <view class="td td3">{{item.action}}</view>
+      </view>
+    </view>
+ </view>
+
+

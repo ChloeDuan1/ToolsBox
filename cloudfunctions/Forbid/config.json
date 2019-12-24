@@ -1,0 +1,9 @@
+{
+  "triggers": [
+    {
+      "name": "forbidtimer",
+      "type": "timer",
+      "config": "0 */60 8-20 * * * *"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "triggers": [
+    {
+      "name": "detachforbidtimer",
+      "type": "timer",
+      "config": "0 */60 8-20 * * * *"
+    }
+  ]
+}

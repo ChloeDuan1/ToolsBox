@@ -1,0 +1,19 @@
+<!--pages/manage/manage.wxml-->
+  <view class='page-body' >
+    <!--类型判断,显示不同的数据-->
+    <block wx:for="{{Boxlist}}" wx:key="">
+        <view class='item' hover-class="hover" bindtap="actioncnt" data-boxname = "{{item.Box_Name}}">
+          <view class='meta'>
+            <text class='BoxName'>{{item.Box_Name}}</text>
+            <view class='Details'>
+              <text>详情：</text>
+              <text>{{item.Details}}</text>
+            </view>
+            <view class='BoxAddr'>
+              <text>地址：</text>
+              <text>{{item.Addr}}</text>
+            </view>
+          </view>
+        </view>
+    </block>
+  </view>
